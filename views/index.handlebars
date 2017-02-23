@@ -36,7 +36,10 @@
 		</div>
 
 		<h4>Projects</h4>
+		 
+		 {{#if min}}
 		{{#each projects}}
+	
 			<div class="project" id="{{id}}">
 				<div class="thumbnail">
 					<a href="/project/{{id}}">
@@ -47,8 +50,17 @@
 					<div class="details"></div>
 				</div>
 			</div>
-		{{/each}}
+		  
+        {{else}}
 
+        <button type="button">Click Me!</button>
+
+    <div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+					<div class="details"></div>
+            
+            {{/each}}
+            {{/if}}
+             
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
